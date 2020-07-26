@@ -1,0 +1,318 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* Reset para REMS, ( 62.6% = 10PX ) que por default 1REM es mas o menos 16PX */
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Lato', sans-serif;     /*Definimos la fuente que tendra todo el cuerpo (Se llama de GoogleFonts desde el index)*/
+    font-size: 1.6rem;                   /*Con este indicamos el tamaño de la fuente*/
+    line-height: 2;                      /*Definimos el espacio entre las lineas de texto*/
+}
+
+/** Globales **/
+img{                        /*Estilo para todas las imagenes*/
+    max-width: 100%;   /*Permite que todas las imagenes sean responsivas*/
+}
+.contenedor{                                  /*Definimos espacios y margenes de logo, enlaces y titulo de la pagina*/
+    max-width: 120rem;        /*Decimos que tome el espacio disponible pero que no se pase de 1200px*/
+    margin: 0 auto 0 auto;    /*Indicamos el margen que va a tomar la pagina 0=arriba auto=derecha 0=abajo auto=izquierda, (como un reloj)*/
+}
+
+h1{                         /*Definimos tamaño de las letras h1*/
+    font-size: 3.8rem;
+}
+h2{                         /*Definimos tamaño de las letras h2*/
+    font-size: 3.4rem;
+}
+h3{                         /*Definimos tamaño de las letras h3*/
+    font-size: 3rem;
+}
+h4{                         /*Definimos tamaño de las letras h4*/
+    font-size: 2.6rem;
+}
+
+/* Utilidades */
+.seccion{                     /* Separacion de las secciones*/
+    margin-top: 2rem;         /* Margen de arriba*/
+    margin-bottom: 2rem;      /* Margen de abajo*/
+}
+.fw-300{                   /*tamaño del font en 300*/
+    font-weight: 300;   /*Definimos el tamaño del font*/
+}
+.centrar-texto{              /*Clase para centrar texto*/
+    text-align: center;  /*Centramos el texto*/
+}
+.d-block{
+    display: block!important;
+}
+.contenido-centrado{
+    max-width: 800px;
+}
+
+/* Botones */
+.boton{
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+}
+.boton-amarillo{
+    background-color: #18b2a3;
+}
+.boton-verde{
+    background-color: #50b8f8;
+}
+
+/* Header */
+.site-header{
+    background-color: #333333;
+    padding: 1rem 3rem 0;
+}
+.site-header.inicio {                                  /*Clase para configurar la cabeza "header" de la pagina*/
+    background-image: url(../img/HeaderShop1.jpg);   /*Con este llamamos la imagen para la cabeza de la pagina*/
+    background-position: center center;         /*Con este posicionamos la imagen para que la muestre desde el centro y expanda el contenido*/
+    background-size: cover;                     /*Con este (Cover) hacemos que tome el espacio disponible tanto altura como ancho*/
+    height: 100vh;                              /*Con este hacemos que la imagen cubra toda la altura de la pantalla*/
+    min-height: 60rem;                          /*Con este indicamos lo mínimo que va a medir la imagen*/
+}
+.contenido-header{                                  /*Separamos el logo del titulo de la pagina*/
+    height: 100%;                      /* Toma el 100% de la altura del padre*/
+    display: flex;                     /* "Display: Flex" es para poder posicionar los elementos*/
+    flex-direction: column;            /* Le damos direccion de abajo hacia arriba al "Display: Flex"*/
+    justify-content: space-between;    /* Con "space-between", alineamos los elementos distribuidos arriba y abajo*/
+}
+.contenido-header h1{                      /*Definimos estilos al titulo de la pagina*/    
+    color: #ffffff;          /*Definimos el color del titulo de la pagina*/
+    padding-bottom: 2rem;      /*Separamos el titulo del borde inferior de la cabecera de la pagina*/
+    max-width: 60rem;          /*Decimos el maximo de ancho del titulo para que haga un salto de linea*/
+    line-height: 2;            /*Definimos separacion "interlineado" entre las lineas de texto*/
+}
+.barra{                                             /*Con esta clase posicionamos proporcionalmente los elementos del encabezado*/
+    display: flex;                     /*con esto posicionamos los elementos de lado der e izq, "flex" solo afecta al primer nivel de hijos*/
+    justify-content: space-between;    /*con "space-between", alineamos los elementos distribuidos a la izquierda y derecha*/
+    align-items: center;               /*Alineamos el logo y los enlaces de forma central*/
+    padding-top: 3rem;                 /*espacio o margen hacia adentro del elemento*/
+}
+
+/** Navegacion**/
+.navegacion a{                                 /*Definimos estilos a los enlaces*/
+    color: #ffffff;          /*definimos el color de los enlaces*/
+    text-decoration: none;     /*quitamos la linea inferior predeterminada de los enlaces*/
+    font-size: 1.8rem;         /*definimos el tamaño de la letra de los enlaces*/
+    margin-right: 2rem;        /*definimos el espacio entre los enlaces*/
+}
+.navegacion a:hover{        /* ":hover" es para indicar el color que toma el enlace al fijar el cursor sobre el*/
+    color: #34c1c7;   /*definimos el color*/
+}
+.navegacion a:last-of-type {      /* ":last-of-type" es para definir el margen del ultimo elemento (usado para quitar su margen)*/
+    margin: 0;                 /*definimos que margen tendra el ultimo elemento*/
+}
+
+
+.navegacion b{                                 /*Definimos estilos a los enlaces*/
+    color: #ffffff;          /*definimos el color de los enlaces*/
+    text-decoration: none;     /*quitamos la linea inferior predeterminada de los enlaces*/
+    font-size: 1.8rem;         /*definimos el tamaño de la letra de los enlaces*/
+    margin-right: 2rem;        /*definimos el espacio entre los enlaces*/
+}
+.navegacion b:hover{        /* ":hover" es para indicar el color que toma el enlace al fijar el cursor sobre el*/
+    color: #34c1c7;   /*definimos el color*/
+}
+.navegacion b:last-of-type {      /* ":last-of-type" es para definir el margen del ultimo elemento (usado para quitar su margen)*/
+    margin: 0;                 /*definimos que margen tendra el ultimo elemento*/
+}
+
+/*  Iconos Nosotros */
+.iconos-nosotros{                                  /*Posicionamos los iconos*/
+    display: flex;                     /* Posicionamos los elementos uno frente al otro*/
+    justify-content: space-between;    /* Separamos los iconos proporcionalmente*/
+}
+.iconos-nosotros img{
+    width: 15rem;
+    height: 15rem;
+}
+.icono{                                         /*Especificamos tamaño y alinecion del de icono y su texto*/
+    flex-basis: calc(33.3% - 1rem);    /* Damos la misma medida a todos los iconos con su texto*/
+    text-align: center;                /* Alineamos el texto*/
+}
+.icono h3{                                  /*Damos estilos a los h3 "subtitulos" */
+    text-transform: uppercase;     /*Cambiamos la letra a mayusculas*/
+}
+
+/* Anuncios */
+.contenedor-anuncios{
+    display: flex;                     /*Alineamos los anuncios uno del lado del otro*/
+    justify-content: space-between;    /*Separamos los anuncios*/
+    flex-wrap: wrap;
+}
+.anuncio{
+    flex: 0 0 calc(33.3% - 1rem);   /**/
+    border: 1px solid #b5b5b5;    /*El orden es width, style y color, con este creamos el borde alrededor de los anuncios*/
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+.contenido-anuncio{
+    padding: 2rem;
+}
+.contenido-anuncio h3, 
+.contenido-anuncio p{
+    margin: 0;
+}
+.precio{
+    color: #71b100;
+    font-weight: 700;
+}
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+}
+.iconos-caracteristicas li{
+    /*flex: 1;*/
+    display: flex;
+}
+.iconos-caracteristicas li img{
+    margin-right: 2rem;
+}
+.ver-todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Contacto Home */
+.imagen-contacto{
+    background-image: url(../img/Encuentra3.jpeg);
+    background-position: top;
+    background-size: 100%;
+    height: 70rem;
+    display: flex;
+    align-items: center;
+    
+}
+.contenido-contacto{
+    flex: 1;
+    color: #ffffff;
+}
+.contenido-contacto{
+    font-size: 1.8rem;
+}
+
+/* Seccion Inferior */
+.seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+}
+.seccion-inferior .blog{
+    flex-basis: 60%;
+}
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entrada-blog :last-of-type{
+    margin-bottom: 0;
+}
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+.texto-entrada a{
+    color: #000000;
+    text-decoration: none;
+}
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.4;
+}
+.texto-entrada h4::after{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+.texto-entrada span{
+    color: #e08709;
+}
+
+/* Testimoniales */
+.testimonial{
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 2rem;
+}
+.testimonial p{
+    text-align: right;
+}
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;   
+    position: absolute;
+    left: -2rem;
+}
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/* Footer */
+.site-footer{
+    background-color: #333333;
+    margin: 0;
+}
+.contenedor-footer{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    margin: 0;
+    color: #ffffff;
+}
+
+/******** INTERNAS ********/
+/******** Nosotros ********/
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+/******** Anuncio ********/
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/******** Contacto ********/
+label{
+    display: block;
+}
